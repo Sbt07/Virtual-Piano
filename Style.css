@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right bottom, #eeebf5, #f2cfee);
+  }
+  h2{
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .wrapper {
+    padding: 35px 40px;
+    border-radius: 20px;
+    background: #000000;
+  }
+  .wrapper header {
+    display: flex;
+    color: #cfcbcb;
+    font-weight: 600;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .column {
+    display: flex;
+    align-items: center;
+  }
+  header span {
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 1.19rem;
+  }
+  header input {
+    outline: none;
+    border-radius: 30px;
+  }
+  .volume-slider input {
+    accent-color: #fff;
+  }
+  .volume-slider span, .keys-checkbox span {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .keys-checkbox input {
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    background: #4B4B4B
+  }
+  .keys-checkbox input::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #8c8c8c;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+  .keys-checkbox input:checked::before {
+    left: 35px;
+    background: #fff;
+  }
+  .piano-keys {
+    display: flex;
+    margin-top: 40px;
+  }
+  .piano-keys .key {
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    color: #a2a2a2;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .piano-keys .black{
+    width: 44px;
+    height: 140px;
+    z-index: 2;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    background: #000;
+  }
+  .piano-keys .black.active{
+    box-shadow:inset -5px 5px 10px rgba(255,255,255,0.15);
+    background: #191919;
+  }
+  .piano-keys .white{
+    width: 70px;
+    height: 230px;
+    border-radius: 8px;
+    border: 2.5px solid #000;
+    background: #fff
+  }
+  .piano-keys .white.active{
+    box-shadow:inset -5px 5px 20px rgba(0,0,0,0.2);
+    background: #efefef;
+  }
+  .piano-keys span{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 1.13rem;
+    font-weight: 650;
+    text-align: center;
+  }
+  .piano-keys .key.hide span{
+    display: none;
+  }
+
+  @media (max-width:400px){
+    h2{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+    .wrapper{
+        margin-top: -330px;
+        width: 80%;
+        padding: 15px;
+    }
+    .header :where(.column){
+        margin-bottom: 13px;
+    }
+    .volume-slider input{
+        max-width: 80px;
+        margin-left: -10px;
+    }
+    .volume-slider span, .keys-checkbox span {
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .keys-checkbox input {
+        height: 26px;
+        width: 50px;
+        margin-left: -12px;
+      }
+    .piano-keys{
+        margin-top: 20px;
+        margin-left: 5px;
+    }
+    .piano-keys .black{
+        height: 90px;
+        width: 30px;
+        margin: 0 -20px 0 -20px;
+        
+    }
+    .piano-keys .white{
+        height: 140px;
+        width: 50px;
+        border-radius: 10px;
+        border-top: #f8f5f5;
+        }  
+    .piano-keys span{
+        bottom: 15px;
+        width: 100%;
+        font-size: 0.9rem;
+        text-align: center;
+        text-decoration: none;
+        padding-right: 1dvi;
+        } 
+  }
