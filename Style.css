@@ -128,7 +128,7 @@ body {
       }
     .wrapper{
         margin-top: -330px;
-        width: 80%;
+        width: 90%;
         padding: 15px;
     }
     .header :where(.column){
@@ -146,7 +146,7 @@ body {
     }
     .keys-checkbox input {
         height: 26px;
-        width: 50px;
+        width: 60px;
         margin-left: -12px;
       }
     .piano-keys{
